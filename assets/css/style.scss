@@ -13,6 +13,10 @@ body{
     min-height: calc(100vh - 56px);
 }
 
+pre{
+    padding: 0.5rem;
+}
+
 .title{
     font-family: 'Nunito', sans-serif;
     color: rgb(179, 179, 179);
