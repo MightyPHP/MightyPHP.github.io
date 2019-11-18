@@ -1,5 +1,41 @@
-<a class="nav-link" href="{{ site.baseurl }}/docs">Introduction</a>
+<!-- <a class="nav-link" href="{{ site.baseurl }}/docs">Introduction</a>
 <a class="nav-link" href="{{ site.baseurl }}/docs/security">Security</a>
 <a class="nav-link" href="{{ site.baseurl }}/docs/view">View</a>
 <a class="nav-link" href="{{ site.baseurl }}/docs/route">Route</a>
-<a class="nav-link" href="{{ site.baseurl }}/docs/storage">Storage</a>
+<a class="nav-link" href="{{ site.baseurl }}/docs/storage">Storage</a> -->
+
+{% for site in site.data.docbar %}
+    {% if site.child %}
+        <a role="button" class="nav-link nav-link-dropdown collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="#_{{ site.key }}" href="#_{{ site.key }}">{{ site.name }}</a>
+        <div class="collapse" id="_{{ site.key }}">
+            <div class="card-body">
+                {% for child in site.child %}
+                    <a class="nav-link nav-link-child" href="/docs/~version/{{ site.key }}/{{ child.key }}">{{ child.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    {% else %}
+        <a class="nav-link" href="/docs/~version/{{ site.key }}">{{ site.name }}</a>
+    {% endif %}
+
+{% endfor %}
+
+
+<script>
+    $('.nav-link').each(function(){
+        let url = $(this).attr('href');
+        url = url.replace('~version', window.sessionStorage.getItem('_version'));
+
+        $(this).attr('href', url);
+
+        // console.log(window.location.pathname)
+        if(url == window.location.pathname){
+            
+            if($(this).hasClass('nav-link-child')){
+                let id = $(this).closest('.collapse').attr('id');
+                $("[href='#"+id+"']").removeClass('collapsed');
+                $(this).closest('.collapse').addClass('show');
+            }
+        }
+    })
+</script>

@@ -1,48 +1,58 @@
 ---
 ---
 
-@import 'syntax';
+@import "syntax";
 
-html{
-    min-height: 100vh;
+html {
+  min-height: 100vh;
 }
 
-body{
-    background-color: white!important;
-    font-family: 'Montserrat', sans-serif;
-    min-height: calc(100vh - 56px);
+body {
+  background-color: white !important;
+  font-family: "Montserrat", sans-serif;
+  min-height: calc(100vh - 56px);
 }
 
-pre{
-    padding: 0.5rem;
+pre {
+  padding: 0.5rem;
 }
 
-.title{
-    font-family: 'Nunito', sans-serif;
-    color: rgb(179, 179, 179);
-    text-shadow: 2px 2px 4px rgb(204, 202, 202) !important;
+.title {
+  font-family: "Nunito", sans-serif;
+  color: rgb(179, 179, 179);
+  text-shadow: 2px 2px 4px rgb(204, 202, 202) !important;
 }
 
-.navbar{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.navbar {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.doc-sidebar{
-    height: calc(100vh - 56px);
-    overflow-y: auto;
-    position: -webkit-sticky;
-    position: sticky;
-    // top: 4rem;
-    nav{
-        height: 100%;
-        width: 100%;  
-    }
-    top: 56px;
+.doc-sidebar {
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  // top: 4rem;
+  nav {
+    height: 100%;
+    width: 100%;
+  }
+  top: 56px;
 }
 
-.mobile-menu{
-    overflow-x: auto;
-    .nav-item{
-        padding: 0.15rem 0.5rem;
-    }
+.mobile-menu {
+  overflow-x: auto;
+  .nav-item {
+    padding: 0.15rem 0.5rem;
+  }
+}
+
+.nav-link-dropdown:after {
+  font-family: "FontAwesome"; /* essential to enable caret symbol*/
+  content: "  \f0d7"; /* adjust as needed, taken from font-awesome.css */
+  color: grey;
+}
+.nav-link-dropdown.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "  \f0da"; /* adjust as needed, taken from font-awesome.css */
 }

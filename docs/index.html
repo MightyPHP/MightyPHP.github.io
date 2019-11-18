@@ -1,0 +1,10 @@
+<html>
+    <script>
+        if(!window.sessionStorage.getItem('_version')){
+            window.sessionStorage.setItem('_version','1.0.0');
+        }
+
+        
+        window.location.href = '/docs/'+window.sessionStorage.getItem('_version');
+    </script>
+</html>
