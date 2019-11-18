@@ -9,4 +9,6 @@
 
 MightyPHP's documentation is in progress -->
 
-<iframe style="border: 0;" width="100%" height="100%" src="https://mightyphp.gitbook.io/mightyphp/"></iframe>
+<div style="height: 100%; display: flex; flex-grow: 1;">
+    <iframe style="border: 0;" width="100%" height="100%" src="https://mightyphp.gitbook.io/mightyphp/"></iframe>
+</div>
