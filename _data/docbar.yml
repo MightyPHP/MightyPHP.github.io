@@ -3,6 +3,13 @@
 - view:
   name: View
   key: view
+  child: 
+    - generate:
+      name: Generating View
+      key: generate
+    - twig:
+      name: Twig Templating
+      key: twig
 - security:
   name: Security
   key: security

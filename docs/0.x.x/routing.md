@@ -2,6 +2,8 @@
 layout: docs
 title: Route
 ---
+# Routing
+
 Routing in MightyPHP uses the routing blocks. Routing blocks are chunks of declarations of request method, path and its endpoint.
 
 ### Basic Routing

@@ -27,7 +27,7 @@ By having the {% raw %} `{{ @csrf }}` {% endraw %} tag, the form will automatica
 
 There will be times when you would need to simply call to the backend without a form. You can thus send the `X-CSRF-TOKEN` header with the token.
 
-To access the token from your view, simply use the {% raw %} `liquid {{ csrf_token() }}` {% endraw %} to grab the value. 
+To access the token from your view, simply use the {% raw %} `{{ csrf_token() }}` {% endraw %} to grab the value. 
 
 Example with Axios client:
 

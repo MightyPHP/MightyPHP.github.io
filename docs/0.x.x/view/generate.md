@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: View
+title: Generating View
 ---
 In order to render a view, the `_view()` can be initiated to call upon its view files. Note that in MightyPHP, all view files are in HTML format.
 
