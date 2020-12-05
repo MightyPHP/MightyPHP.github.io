@@ -2,10 +2,11 @@
 layout: blog
 title:  "Release of v1.0.0"
 date:   2020-12-04 16:23:32 +0800
-categories: blog
+dateLabel: "4 December 2020"
+categories: announcement
+permalink: /blog/:year/:month/:day/:title/
 ---
-<h1>The first official production version of MightyPHP!</h1>
-
+<h2>{{ page.title }}</h2>
 After months of working 0.x.x versions, the decision to fix on some standard features and functions was made in early and mid 2020. With some tweaking, the first production ready version is ready.
 
 ## What's new?

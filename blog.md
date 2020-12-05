@@ -6,10 +6,13 @@ layout: blog
 ---
 <h1 class="py-2 px-2">Blog Posts</h1>
 
-<ul>
+<div class="row">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+    <div class="col-12">
+      <a class="text-decoration-none" href="{{ post.url }}"><div class="card px-2 py-2">
+        <caption class="text-muted">{{ post.dateLabel}}</caption>
+        <p>{{ post.excerpt }}</p>
+      </div></a>
+    </div>
   {% endfor %}
-</ul>
+</div>
